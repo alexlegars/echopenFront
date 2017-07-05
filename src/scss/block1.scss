@@ -6,13 +6,27 @@
   .block__1-first{
     width: 90%;
     float: right;
-    margin-bottom: 20px;
+    margin-bottom: 120px;
+
+
+    @media (max-width: 900px){
+      float: none;
+      display: block;
+      margin: auto;
+    }
 
     .left{
       float: left;
       width: 40%;
       padding: 0px 20px;
       box-sizing: border-box;
+
+      @media (max-width: 900px){
+        float: none;
+        display: block;
+        margin: auto;
+        width: 80%;
+      }
       
       h2{
         color: #66c1b8;
@@ -20,6 +34,13 @@
         padding-bottom: 7px;
         text-transform: uppercase;
         font-size: 54px;
+        margin-top: 0px;
+
+        @media (max-width: 900px){
+          text-align: center;
+          font-size: 38px;
+          padding-left: 0px;
+        }
       }
 
       span{
@@ -32,6 +53,11 @@
         line-height: 20px;
         font-family: 'Lato', sans-serif;
 
+        @media (max-width: 900px){
+          font-size: 14px;
+          padding-left: 0px;
+        }
+
       }
     }
 
@@ -40,19 +66,66 @@
       width: 60%;
       padding: 0px 20px;
       box-sizing: border-box;
+
+      @media (max-width: 900px){
+        float: none;
+        display: block;
+        width: 80%;
+        margin: auto;
+      }
+
+      img{
+        width: 500px;
+        float: right;
+
+        @media (max-width: 900px){
+          float: none;
+          display: block;
+          margin: auto;
+          width: 80%;
+          margin-bottom: 80px;
+        }
+      }
     }
   }
 
   .block__1-second{
     width: 90%;
     float: right;
-    margin-bottom: 20px;
+    margin-bottom: 120px;
+
+    @media (max-width: 900px){
+      float: none;
+      display: block;
+      margin: auto;
+    }
 
     .left{
       float: left;
       width: 60%;
       padding: 0px 20px;
       box-sizing: border-box;
+
+      @media (max-width: 900px){
+        float: none;
+        display: block;
+        margin: auto;
+        width: 80%;
+      }
+
+      img{
+        width: 500px;
+        float: left;
+
+        @media (max-width: 900px){
+          float: none;
+          display: block;
+          margin: auto;
+          width: 80%;
+          margin-bottom: 40px;
+
+        }
+      }
     }
 
     .right{
@@ -60,6 +133,13 @@
       width: 40%;
       padding: 0px 20px;
       box-sizing: border-box;
+
+      @media (max-width: 900px){
+        float: none;
+        display: block;
+        margin: auto;
+        width: 80%;
+      }
 
       h2{
         color: #66c1b8;
@@ -68,6 +148,13 @@
         font-size: 54px;
         text-align: right;
         font-family: 'Lato', sans-serif;
+        margin-top: 0px;
+
+        @media (max-width: 900px){
+          text-align: center;
+          font-size: 38px;
+          padding-left: 0px;
+        }
       }
 
       span{
@@ -79,6 +166,11 @@
         font-size: 16px;
         line-height: 20px;
         font-family: 'Lato', sans-serif;
+
+        @media (max-width: 900px){
+          font-size: 14px;
+          padding-left: 0px;
+        }
       }
     }
   }
