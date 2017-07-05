@@ -1,0 +1,34 @@
+.stats-container {
+	height: 100vh;
+	background: #FFF;
+
+	ul li {
+		display: block;
+		width:200px;
+		height:200px;
+		border:2px solid #F24153;
+		border-radius:50%;
+		-webkit-animation : Turn 20s infinite linear;
+		position:absolute;
+
+		&:nth-child(2) {
+			-webkit-animation-delay:.2s;
+			border: 2px solid #b0cbcb;
+		}
+
+		&:nth-child(3) {
+			-webkit-animation-delay:0.4s;
+			border: 2px solid #F24153;
+		}
+
+	}
+}
+
+@-webkit-keyframes Turn {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(5deg) rotateZ(0deg);
+  }
+}
