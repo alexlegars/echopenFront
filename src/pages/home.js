@@ -3,6 +3,7 @@ import ContactForm from "../components/ContactForm";
 import BlockFirst from "../components/BlockFirst";
 import SineWaves from 'sine-waves/sine-waves.min'
 import SimpleSlider from '../components/SimpleSlider';
+import Temoignage from '../components/Temoignage';
 import $ from 'jquery';
 
 export default class HomePage extends React.Component {
@@ -81,9 +82,9 @@ export default class HomePage extends React.Component {
         return (
             <div>
                 <canvas id="waves"></canvas>
-                <SimpleSlider/>
                 <ContactForm/>
                 <BlockFirst/>
+                <Temoignage/>
             </div>
 
         )
