@@ -38,7 +38,7 @@ export default class SimpleSlider extends React.Component {
             ]
         };
         return (
-            <Slider className="slider__" {...settings}>
+            <Slider className="slider__ will-animate" {...settings}>
                     <div className="single__temoignage">
                         <div className="single__header">
                             <img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" alt=""/>

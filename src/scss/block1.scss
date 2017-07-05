@@ -26,6 +26,7 @@
         display: block;
         margin: auto;
         width: 80%;
+        margin-bottom: 80px;
       }
       
       h2{
@@ -83,7 +84,7 @@
           display: block;
           margin: auto;
           width: 80%;
-          margin-bottom: 80px;
+          margin-bottom: 40px;
         }
       }
     }
@@ -111,6 +112,7 @@
         display: block;
         margin: auto;
         width: 80%;
+
       }
 
       img{
@@ -139,6 +141,7 @@
         display: block;
         margin: auto;
         width: 80%;
+        margin-bottom: 80px;
       }
 
       h2{
@@ -178,4 +181,33 @@
 
 .clear{
   clear: both;
+}
+
+.on-mobile{
+  display: none !important;
+
+  @media (max-width: 900px){
+    display: block !important;
+  }
+
+}
+
+.no-mobile{
+  display: block !important;
+
+  @media (max-width: 900px){
+    display: none !important;
+  }
+}
+
+
+.will-animate{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .6s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.animate{
+  opacity: 1;
+  transform: translateY(0px);
 }

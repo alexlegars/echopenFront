@@ -9,6 +9,30 @@ import $ from 'jquery';
 export default class HomePage extends React.Component {
     render() {
         $(function(){
+            function parallaxElements() {
+
+                $(".will-animate, .wa, .case-item").each(function (i, v) {
+
+                    var scrollTop = $(window).scrollTop(),
+                        el = $(this),
+                        elHeight = el.height(),
+                        winHeight = $(window).height(),
+                        offsetTop = el.offset().top + parseInt(el.css("padding-top")),// + winHeight * app.delta
+                        bottomScreen = scrollTop + winHeight;
+
+                    if (bottomScreen >= offsetTop) {
+                        el.addClass("animate");
+                        console.log('OFFSET_SET_SET!')
+                    }
+
+                });
+
+
+                requestAnimationFrame(parallaxElements);
+            }
+
+            requestAnimationFrame(parallaxElements);
+
             var waves = new SineWaves({
                 el: document.getElementById('waves'),
 
