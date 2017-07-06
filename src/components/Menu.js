@@ -1,5 +1,6 @@
 import React from 'react';
 import {TweenMax} from 'gsap';
+import Is from '../bundles/is'
 
 
 export default class Menu extends React.Component {
@@ -15,6 +16,33 @@ export default class Menu extends React.Component {
     componentWillUnmount() {
     }
 
+    toogleOpen() {
+        let open = !this.state.open;
+        if (!this.state.open) {
+            TweenMax.to(this.refs.routeManager, 0.2, {
+                opacity : 0
+            });
+            this.setState({
+                open : open
+            }, () => {
+                if (!open) {
+                    TweenMax.to(this.refs.routeManager, 0.2, {
+                        opacity : 1,
+                        delay : 0.5
+                    });
+                }
+            });
+        } else {
+            this.setState({
+                open : false
+            }, () => {
+                TweenMax.to(this.refs.routeManager, 0.2, {
+                    opacity : 1,
+                    delay : 0.5
+                });
+            });
+        }
+    }
     open() {
         var open = !this.state.open;
         if (open) {
@@ -47,9 +75,10 @@ export default class Menu extends React.Component {
 
 
     render() {
+
         return (
             <div className={"component menu "+(this.state.open?"open":"")}>
-                <div className="containerMenu"onMouseEnter={this.open.bind(this)} onMouseLeave={this.close.bind(this)}>
+                <div className="containerMenu"onMouseEnter={this.open.bind(this)} onClick={this.toogleOpen.bind(this)} onMouseLeave={this.close.bind(this)}>
                     <div className="burger">
                         <div className="content">
                             <div className="line"/>
