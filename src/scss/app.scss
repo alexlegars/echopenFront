@@ -1,5 +1,17 @@
+@import "mixins";
+@import 'menu';
+
+$color: #2196f3;
+$buttonradius: 50px;
+$buttonlinheight: 2px;
+$burgerwidth: 0.40 * $buttonradius;
+$burgergutter: 10px;
+
+
+
 html {
   padding: 0;
   margin: 0;
+  background-color: white;
 }
 
