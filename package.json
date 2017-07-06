@@ -16,7 +16,8 @@
     "react-scroll-to-component": "^1.0.1",
     "react-slick": "^0.14.11",
     "sine-waves": "^0.3.0",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "swiper": "^3.4.2"
   },
   "devDependencies": {
     "react-scripts": "1.0.10"

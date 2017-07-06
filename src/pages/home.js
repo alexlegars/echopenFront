@@ -1,7 +1,7 @@
 import React from 'react';
 import {slide as Menu} from 'react-burger-menu';
 import ContactForm from "../components/ContactForm";
-import BlockFirst from "../components/BlockFirst";
+import BlockSec from "../components/BlockSec";
 import SimpleSlider from '../components/SimpleSlider';
 import Temoignage from '../components/Temoignage';
 import Header from '../components/Header';
@@ -81,7 +81,7 @@ export default class HomePage extends React.Component {
                 </Menu>
                 <Header/>
                 {/*<SimpleSlider ref="slider"/>*/}
-                <BlockFirst ref="first"/>
+                <BlockSec ref="first"/>
                 <Temoignage/>
                 <ContactForm ref="form"/>
             </div>
