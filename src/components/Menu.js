@@ -16,60 +16,36 @@ export default class Menu extends React.Component {
     componentWillUnmount() {
     }
 
-    toogleOpen() {
+    toogleOpen(e) {
+        e.preventDefault();
         let open = !this.state.open;
+        if (Is.mobile) {
+            this.refs.links.classList.remove('transparent');
+        }
         if (!this.state.open) {
-            TweenMax.to(this.refs.routeManager, 0.2, {
-                opacity : 0
-            });
             this.setState({
                 open : open
-            }, () => {
-                if (!open) {
-                    TweenMax.to(this.refs.routeManager, 0.2, {
-                        opacity : 1,
-                        delay : 0.5
-                    });
-                }
             });
         } else {
+            if (Is.mobile) {
+                this.refs.links.classList.add('transparent');
+            }
             this.setState({
                 open : false
-            }, () => {
-                TweenMax.to(this.refs.routeManager, 0.2, {
-                    opacity : 1,
-                    delay : 0.5
-                });
             });
         }
+        return false;
     }
     open() {
         var open = !this.state.open;
-        if (open) {
-            TweenMax.to(this.refs.routeManager, 0.2, {
-                opacity : 0
-            });
-        }
         this.setState({
             open : open
-        }, () => {
-            if (!open) {
-                TweenMax.to(this.refs.routeManager, 0.2, {
-                    opacity : 1,
-                    delay : 0.5
-                });
-            }
         });
     }
 
     close() {
         this.setState({
             open : false
-        }, () => {
-            TweenMax.to(this.refs.routeManager, 0.2, {
-                opacity : 1,
-                delay : 0.5
-            });
         });
     }
 
@@ -77,8 +53,8 @@ export default class Menu extends React.Component {
     render() {
 
         return (
-            <div className={"component menu "+(this.state.open?"open":"")}>
-                <div className="containerMenu"onMouseEnter={this.open.bind(this)} onClick={this.toogleOpen.bind(this)} onMouseLeave={this.close.bind(this)}>
+            <div className={"component menu "+(this.state.open?"open ":"")+(Is.mobile?"mobile ":"")}>
+                <div className="containerMenu" onMouseEnter={!Is.mobile?this.open.bind(this):null} onClick={this.toogleOpen.bind(this)} onMouseLeave={!Is.mobile?this.close.bind(this):null}>
                     <div className="burger">
                         <div className="content">
                             <div className="line"/>
@@ -91,9 +67,7 @@ export default class Menu extends React.Component {
                       <div className="clr"/>
                     </ul>
                 </div>
-                <div className={"routeManager "+this.state.color} ref="routeManager">
-                    {this.state.route}
-                </div>
+
             </div>
         );
     }
