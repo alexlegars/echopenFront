@@ -1,4 +1,4 @@
-
+@import "mixins";
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #373a47;
@@ -159,7 +159,7 @@ $sass-burger-add-vendor-prefixes: true !default;
   position: fixed;
   bottom: 50px;
   right: 50px;
-  z-index: 15;
+  z-index: 50 !important;
   display: block;
   width: 25px;
   height: 19px;
@@ -173,7 +173,9 @@ $sass-burger-add-vendor-prefixes: true !default;
   0 0 4px 0 rgba(0,0,0,0.3) inset;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.3),
   0 0 4px 0 rgba(0,0,0,0.3) inset;
-
+  button {
+    z-index: 50;
+  }
 
   .burger-icon {
     -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);

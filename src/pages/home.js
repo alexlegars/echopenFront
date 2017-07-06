@@ -1,89 +1,52 @@
 import React from 'react';
+import { slide as Menu } from 'react-burger-menu';
 import ContactForm from "../components/ContactForm";
 import BlockFirst from "../components/BlockFirst";
-import SineWaves from 'sine-waves/sine-waves.min'
 import SimpleSlider from '../components/SimpleSlider';
-import $ from 'jquery';
+import scrollToComponent from 'react-scroll-to-component';
+import Is from '../bundles/is'
+import {TweenMax} from 'gsap';
+import AnimationCanvas from "../components/AnimationCanvas";
+import BurgerButton from "../components/BurgerButton";
+
 
 export default class HomePage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpened: false,
+            statement: null,
+            mobile: null
+        };
+        this.isMenuOpen = this.isMenuOpen.bind(this);
+
+    }
+
+
+
+    isMenuOpen(state) {
+        if(state.isOpened = !state.isOpened) {
+            this.setState({isOpened: state.isOpen}) ;
+        }
+    }
+
+
+
+
+
     render() {
-        $(function(){
-            var waves = new SineWaves({
-                el: document.getElementById('waves'),
 
-                speed: 4,
-
-                width: function() {
-                    return $(window).width();
-                },
-
-                height: function() {
-                    return $(window).height();
-                },
-
-                ease: 'SineInOut',
-
-                wavesWidth: '70%',
-
-                waves: [
-                    {
-                        timeModifier: 4,
-                        lineWidth: 1,
-                        amplitude: -25,
-                        wavelength: 25
-                    },
-                    {
-                        timeModifier: 2,
-                        lineWidth: 2,
-                        amplitude: -50,
-                        wavelength: 50
-                    },
-                    {
-                        timeModifier: 1,
-                        lineWidth: 1,
-                        amplitude: -100,
-                        wavelength: 100
-                    },
-                    {
-                        timeModifier: 0.5,
-                        lineWidth: 1,
-                        amplitude: -200,
-                        wavelength: 200
-                    },
-                    {
-                        timeModifier: 0.25,
-                        lineWidth: 2,
-                        amplitude: -400,
-                        wavelength: 400
-                    }
-                ],
-
-                // Called on window resize
-                resizeEvent: function() {
-                    var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
-                    gradient.addColorStop(0,"rgba(23, 210, 168, 0.2)");
-                    gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
-                    gradient.addColorStop(1,"rgba(23, 210, 168, 0.2)");
-
-                    var index = -1;
-                    var length = this.waves.length;
-                    while(++index < length){
-                        this.waves[index].strokeStyle = gradient;
-                    }
-
-                    // Clean Up
-                    index = void 0;
-                    length = void 0;
-                    gradient = void 0;
-                }
-            });
-        });
         return (
             <div>
-                <canvas id="waves"></canvas>
-                <SimpleSlider/>
-                <ContactForm/>
-                <BlockFirst/>
+                <Menu right customCrossIcon={false}  burgerBarClassName={ "burger-icon" }  burgerButtonClassName={ "burger" } customBurgerIcon={ <BurgerButton data={this.state.isOpened}/> }  onStateChange={ this.isMenuOpen }  width={Is.mobile  ?'100%':'50%' } >
+                    <div id="home" className="menu-item"  onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Home</div>
+                    <div id="about" className="menu-item" onClick={() => scrollToComponent(this.refs.form, { offset: 0, align: 'top', duration: 1500})}>About</div>
+                    <div id="contact" className="menu-item" onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Contact</div>
+                </Menu>
+                <AnimationCanvas/>
+                <SimpleSlider ref="slider"/>
+                <ContactForm ref="form"/>
+                <BlockFirst ref="first"/>
             </div>
 
         )
