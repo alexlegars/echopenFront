@@ -1,5 +1,11 @@
 {
   "resources": {
-    "key" : "ahahah"
+    "people" : {
+      "medical": "Nous piratons la technologie des ultrasons pour créer un écho-stéthoscope open-source et abordable pour tous! Nous espérons que cet outil sera dans toutes les poches des médecins afin d’améliorer le diagnostic.",
+      "firefighter": "Roger est pompier et souhaite améliorer le diagnostic de son patient pendant le voyage entre un accident et l’hôpital. Maintenant, il participe à notre projet en utilisant un écho-stéthoscope et parle dans son travail et avec ses ami!",
+      "common": "Participer à notre projet ne consiste pas juste à utiliser notre produit, vous pouvez collaborer avec nous sur notre projet, peut importe comment ! Votre contribution, même la plus petite, est importante.",
+      "pregnant": "Une grossesse est l’un des moments les plus importants pour une femme. Nous sommes très concernés par la santé de l’enfant à venir et c’est pourquoi notre produit apportera la serrenité à toute la famille"
+    },
+    "app": "Notre application est pour tout le monde, cela peut être un docteur, une infirmière, vous, mois, surtout vous. La simplicité d’utilisation et le coût permettront de confier cette technologie à toute les personnes dans le monde."
   }
 }

@@ -1,5 +1,11 @@
 {
   "resources": {
-    "key": "ohohohoo"
+    "people" : {
+      "medical": "We are hacking ultrasound technology to create an open-science and affordable Echo-stethoscope for all ! We hope that this tool will be in all the pockets of doctors to improve the diagnosis.",
+      "firefighter": "Roger is fireman and want to improve the diagnostic of his patient during the travel between an accident and the hospital. Now, he participate to our project using an echo-stethoscope and talking around in his work and with his friends !",
+      "common": "Participate to our project is not just using the produce, you can collaborate with us on this project, no matter how ! Your contribution, even the smallest, is important.",
+      "pregnant": "A pregnancy is one of the most important moments for a woman. We are very concerned with the health of the child to come and that is why our product will bring serenity to the whole family.",
+    },
+    "app": "Our application can be for everyone, that can be a doctor, a nurse, you, me, especially you. Simplicity of use and cost will enable to endow this technology every person in the world."
   }
 }
