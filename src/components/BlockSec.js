@@ -20,27 +20,26 @@ export default class BlockSec extends React.Component {
         return(
             <div className="block__2" id="block2">
                 <div className="block__2-first">
-                    <h4>Concept</h4>
+                    <h4 className="will-animate">Concept</h4>
                     <h5>Concept</h5>
                     <SliderConcept/>
                 </div>
 
-                <div className="block__2-first history">
-                    <h4>Histoire</h4>
+                <div className="block__2-first history will-animate">
+                    <h4 className=" will-animate">Histoire</h4>
                     <h5>Histoire</h5>
                     <div className="block__2-container">
                         <div className="block__2-wrapper-r">
                             <div className="left">
-                                <div className="left-container">
-                                    <h3>We are hacking ultrasound technology to create an open-science and affordable Echo-stethoscope for all!
-                                         We hope that this tool will be in all the pockets of doctors to improve the diagnosis.<br/>
-                                        Our application can be for everyone, that can be a doctor, a nurse, you, me, especially you.
-                                        Simplicity of use and cost will enable to endow this technology every person in the world.
+                                <div className="left-container will-animate">
+                                    <h3>After bringing together a core team of 5 people with essential expertise for the project, we tested the feasibility (state of the art, applications etc.).
+                                        We then mobilized other profiles and partners to create an operational community based on 9 specific challenges we identified that cover the entire project.<br/>
+                                        As each participant has various interests and capacities of engagement and expertise, we co-created a project schedule in accordance with these different elements. Using a wiki, which assembles all information (technical, processes, supports, etc.), and online collaboration tools. Some key partners brought resources such as finance, equipment, working spaces, etc. to support the effort and to reach project goals.
                                     </h3>
                                 </div>
                             </div>
                             <div className="right">
-                                <div className="right-container">
+                                <div className="right-container will-animate">
                                     <img src="assets/img/history.png" alt=""/>
                                 </div>
                             </div>
