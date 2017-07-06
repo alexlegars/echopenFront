@@ -8,7 +8,9 @@ export default class Layout extends React.Component {
                 <section className="section section-header">
                     <section className="grid-header container grid-960">
                         <nav className="navbar">
-                            <NavLink className="btn btn-link" to="/home">Accueil</NavLink>
+                            <NavLink className="btn btn-link" to="/">Accueil</NavLink>
+                            <a href="/en">EN</a>
+                            <a href="/fr">FR</a>
                         </nav>
                     </section>
                 </section>

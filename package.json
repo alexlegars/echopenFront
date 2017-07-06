@@ -10,6 +10,7 @@
     "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-i18nify": "^1.8.7",
     "react-router-dom": "^4.1.1",
     "react-slick": "^0.14.11",
     "sine-waves": "^0.3.0",

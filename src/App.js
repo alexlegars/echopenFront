@@ -11,9 +11,8 @@ export default class App extends React.Component {
   render() {
     return (
         <div>
-            <Redirect from="/" to="/home"/>
             <Route path="/" component={Layout}/>
-            <Route path="/home" exact component={HomePage}/>
+            <Route path="/:locale?" component={HomePage}/>
         </div>
     );
   }

@@ -4,8 +4,36 @@ import BlockFirst from "../components/BlockFirst";
 import SineWaves from 'sine-waves/sine-waves.min'
 import SimpleSlider from '../components/SimpleSlider';
 import $ from 'jquery';
+import { I18n } from 'react-i18nify'
+import translationsFr from '../translations/fr.json'
+import translationsEn from '../translations/en.json'
 
 export default class HomePage extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state =  {
+            locale: 'fr',
+            refresh: false,
+        };
+
+        I18n.setTranslations({
+            en: translationsEn,
+            fr: translationsFr
+        });
+    }
+
+    componentDidMount() {
+        if (this.props.match.params.locale && this.state.locale !== this.props.match.params.locale ) {
+            this.setState({
+                'locale': this.props.match.params.locale,
+                'refresh': true,
+            });
+            I18n.setLocale(this.state.locale);
+        }
+    }
+
+
     render() {
         $(function(){
             var waves = new SineWaves({
@@ -78,12 +106,13 @@ export default class HomePage extends React.Component {
                 }
             });
         });
+        console.log(this.props);
         return (
             <div>
                 <canvas id="waves"></canvas>
+                <BlockFirst/>
                 <SimpleSlider/>
                 <ContactForm/>
-                <BlockFirst/>
             </div>
 
         )
