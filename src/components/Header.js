@@ -76,16 +76,28 @@ export default class Temoignage extends React.Component {
         return(
             <div className="header">
                 <AnimationCanvas waves={this.state.waves}/>
-                <div className="langs">
-                    <div className="fr_lang active">
-                        <p>Fr</p>
+
+                <img src="assets/img/logoBlanc.png" alt="" className="mini-logo"/>
+                <div className="socials">
+                    <div className="social-single">
+                        <img src="assets/img/fb.png" alt=""/>
                     </div>
-                    <div className="en_lang">
-                        <p>En</p>
+                    <div className="social-single">
+                        <img src="assets/img/teter.png" alt=""/>
+                    </div>
+                    <div className="social-single">
+                        <img src="assets/img/github.png" alt=""/>
                     </div>
                 </div>
-                <img src="assets/img/logo.png" alt="" className="logo"/>
-                <h2 className="will-animate">Designing an open source and<br/> low-cost echo-stethoscope</h2>
+                <div className="langs">
+                        <p className="active langs__">Fr</p>
+                        <p className="langs__">En</p>
+                </div>
+                <div className="header-content">
+                    <img src="assets/img/logoBlanc.png" alt="" className="logo"/>
+                    <h2 className="will-animate">Designing an open source and low-cost echo-stethoscope</h2>
+                    <p>echOpen is an open and collaborative project and community, led by a multidisciplinary core of experts and senior professionals with the aim of designing a functional low-cost (affordable) and open source echo-stethoscope (ultrasound probe) connected to a smartphone, allowing the radical transformation of diagnostic orientation in hospitals, general medicine and medically underserved areas. This initiate is aimed for health professionals from southern and northern countries.</p>
+                </div>
                 <img src="assets/img/scroll.png" alt="" className="scroll"/>
             </div>
         )

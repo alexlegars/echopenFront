@@ -1,17 +1,15 @@
 import React from 'react';
 import ContactForm from "../components/ContactForm";
-import BlockFirst from "../components/BlockFirst";
+import BlockSec from "../components/BlockSec";
 import SimpleSlider from '../components/SimpleSlider';
 import Temoignage from '../components/Temoignage';
 import Header from '../components/Header';
 import $ from 'jquery';
 import scrollToComponent from 'react-scroll-to-component';
 import Menu from "../components/Menu";
+import BlockFirst from "../components/BlockFirst";
 
 export default class HomePage extends React.Component {
-
-
-
 
 
     render() {
@@ -53,7 +51,10 @@ export default class HomePage extends React.Component {
                 <Header/>
                 {/*<SimpleSlider ref="slider"/>*/}
                 <BlockFirst ref="slider"/>
+                <BlockSec ref="first"/>
                 <Temoignage ref="temoignage"/>
+
+
                 <ContactForm ref="form"/>
             </div>
         )
