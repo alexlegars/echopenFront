@@ -13,7 +13,7 @@ export default class Temoignage extends React.Component {
     render() {
         return(
             <div className="block__temoignage will-animate">
-                <h2 className="will-animate">Quelques témoignage</h2>
+                <h2 className="will-animate">Quelques témoignages</h2>
                 <div className="temoignage_container">
                     <div className="left">
                     </div>
