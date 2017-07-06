@@ -41,38 +41,37 @@ export default class Temoignage extends React.Component {
                     wavelength: 170
                 }
             ]
-        }
-
+        };
+        this.parallaxElements = this.parallaxElements.bind(this);
     }
 
-    render() {
-        $(function(){
-            function parallaxElements() {
 
-                $(".will-animate, .wa, .case-item").each(function (i, v) {
+    parallaxElements() {
 
-                    var scrollTop = $(window).scrollTop(),
-                        el = $(this),
-                        elHeight = el.height(),
-                        winHeight = $(window).height(),
-                        offsetTop = el.offset().top + parseInt(el.css("padding-top")),// + winHeight * app.delta
-                        bottomScreen = scrollTop + winHeight;
+        $(".will-animate, .wa, .case-item").each(function (i, v) {
 
-                    if (bottomScreen >= offsetTop) {
-                        el.addClass("animate");
-                        console.log('OFFSET_SET_SET!')
-                    }
+            var scrollTop = $(window).scrollTop(),
+                el = $(this),
+                elHeight = el.height(),
+                winHeight = $(window).height(),
+                offsetTop = el.offset().top + parseInt(el.css("padding-top")),// + winHeight * app.delta
+                bottomScreen = scrollTop + winHeight;
 
-                });
-
-
-                requestAnimationFrame(parallaxElements);
+            if (bottomScreen >= offsetTop) {
+                el.addClass("animate");
             }
 
-            requestAnimationFrame(parallaxElements);
-
-
         });
+
+
+        requestAnimationFrame(this.parallaxElements);
+    }
+
+    componentDidMount() {
+        requestAnimationFrame(this.parallaxElements);
+
+    }
+    render() {
 
         return(
             <div className="header">
