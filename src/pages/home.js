@@ -1,4 +1,5 @@
 import React from 'react';
+import Stats from "../components/Stats"
 import ContactForm from "../components/ContactForm";
 import SineWaves from 'sine-waves/sine-waves.min'
 import $ from 'jquery';
@@ -80,6 +81,7 @@ export default class HomePage extends React.Component {
             <div>
                 <canvas id="waves"></canvas>
                 <ContactForm/>
+                <Stats/>
             </div>
         )
     }
