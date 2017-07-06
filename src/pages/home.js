@@ -10,6 +10,14 @@ import Menu from "../components/Menu";
 import BlockFirst from "../components/BlockFirst";
 
 export default class HomePage extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
+
+    componentDidMount() {
+        scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500})
+    }
 
 
     render() {
@@ -41,14 +49,14 @@ export default class HomePage extends React.Component {
         return (
             <div>
                 <Menu ref="menu">
-                    <li id="home" className="menu-item"  onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Accueil</li>
-                    <li id="about" className="menu-item" onClick={() => scrollToComponent(this.refs.temoignage, { offset: 0, align: 'top', duration: 1500})}>Produit</li>
-                    <li id="contact" className="menu-item" onClick={() => scrollToComponent(this.refs.form, { offset: 0, align: 'top', duration: 1500})}>Communauté</li>
+                    <li id="accueil" className="menu-item"  onClick={() => scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500})}>Accueil</li>
+                    <li id="produit" className="menu-item" onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Produit</li>
+                    <li id="communaute" className="menu-item" onClick={() => scrollToComponent(this.refs.form, { offset: 0, align: 'top', duration: 1500})}>Communauté</li>
                     <li><a target="_blank" href="http://documentation.echopen.org/">Documentation</a></li>
                     <li><a target="_blank" href="http://wiki.echopen.org/index.php/Main_Page">Wiki</a></li>
                 </Menu>
 
-                <Header/>
+                <Header ref="header"/>
                 {/*<SimpleSlider ref="slider"/>*/}
                 <BlockFirst ref="slider"/>
                 <BlockSec ref="first"/>
