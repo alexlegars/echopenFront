@@ -1,0 +1,12 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+$red: #C8284E;
+$blue: #6291C1;
+$yellow: #FFCC00;
+$green: #66c1b8;
+// Responsive
+@mixin mobile() { @media screen and (max-width:767px) { @content; } } // @include mobile { }
+@mixin tablet() { @media screen and (min-width:768px) and (max-width: 1220px) { @content; } } // @include mobile { }
+@mixin desktop() { @media screen and (min-width:1221px) { @content; } } // @include desktop { }
+@mixin mediumscreen() { @media screen and (min-width:1221px) and (max-width: 1680px) { @content; } } //
