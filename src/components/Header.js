@@ -131,7 +131,7 @@ export default class Temoignage extends React.Component {
                     <h2 className="will-animate">Designing an open source and low-cost echo-stethoscope</h2>
                     <p>echOpen is an open and collaborative project and community, led by a multidisciplinary core of experts and senior professionals with the aim of designing a functional low-cost (affordable) and open source echo-stethoscope (ultrasound probe) connected to a smartphone, allowing the radical transformation of diagnostic orientation in hospitals, general medicine and medically underserved areas. This initiate is aimed for health professionals from southern and northern countries.</p>
                 </div>
-                <img src="assets/img/scroll.png" alt="" className="scroll"/>
+                <a href="#block2"><img src="assets/img/scroll.png" alt="" className="scroll"/></a>
                 <img src="assets/img/menu.png" alt="" className="menu_btn"/>
             </div>
         )
