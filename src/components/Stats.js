@@ -103,6 +103,14 @@ export default class Stats extends React.Component {
                         <div className="shadow-3"></div>
                         <div className="shadow-4"></div>
                         <div className="shadow-5"></div>
+                        <div className="shadow-6"></div>
+                        <div className="shadow-7"></div>
+                        <div className="shadow-8"></div>
+                        <div className="shadow-9"></div>
+                        <div className="shadow-10"></div>
+                        <div className="shadow-11"></div>
+                        <div className="shadow-12"></div>
+                        <div className="shadow-13"></div>
                     </div>
             </div>
         );
