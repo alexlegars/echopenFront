@@ -39,9 +39,13 @@ export default class HomePage extends React.Component {
         return (
             <div>
                 <Menu right customCrossIcon={false}  burgerBarClassName={ "burger-icon" }  burgerButtonClassName={ "burger" } customBurgerIcon={ <BurgerButton data={this.state.isOpened}/> }  onStateChange={ this.isMenuOpen }  width={Is.mobile  ?'100%':'50%' } >
-                    <div id="home" className="menu-item"  onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Home</div>
-                    <div id="about" className="menu-item" onClick={() => scrollToComponent(this.refs.form, { offset: 0, align: 'top', duration: 1500})}>About</div>
-                    <div id="contact" className="menu-item" onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Contact</div>
+                   <div className="external">
+                       <a target="_blank" href="">Wiki</a>
+                       <a target="_blank" href="">Documentation</a>
+                   </div>
+                    <div id="home" className="menu-item"  onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Accueil</div>
+                    <div id="about" className="menu-item" onClick={() => scrollToComponent(this.refs.form, { offset: 0, align: 'top', duration: 1500})}>Produit</div>
+                    <div id="contact" className="menu-item" onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Communauté</div>
                 </Menu>
                 <AnimationCanvas/>
                 <SimpleSlider ref="slider"/>
