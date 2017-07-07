@@ -9,7 +9,6 @@ export default class Newsletter extends React.Component {
             characters: 0
         };
 
-        this._getCharacterCount = this._getCharacterCount.bind(this);
         this._handleSubmit = this._handleSubmit.bind(this);
     }
 
@@ -21,8 +20,8 @@ export default class Newsletter extends React.Component {
                     <div className="newsletter-container">
                             <img className="illu" src="assets/img/newsillu.png" alt=""/>
                             <h2>Stay up to Date!</h2>
-                            <form className="form">
-                                <input type="email" value="" placeholder="Your e-mail" />
+                            <form className="form" onSubmit={this._handleSubmit}>
+                                <input type="email"  ref={c => this._email = c} placeholder="Your e-mail" />
                                 <button type="submit" className="btn btn-primary">-</button>
                             </form>
                     </div>
@@ -32,17 +31,10 @@ export default class Newsletter extends React.Component {
         )
     }
 
-    _getCharacterCount() {
-        this.setState({
-            characters: this._body.value.length
-        })
-    }
 
     _handleSubmit(event) {
         event.preventDefault();
-        this._author.value = '';
-        this._body.value = '';
-        this._email.value = '';
-        this.setState({characters: 0});
+        // this._email.value = '';
+        console.log("get email");
     }
 }
