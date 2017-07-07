@@ -6,10 +6,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slick from 'slick-carousel/slick/slick.min';*/
 import $ from 'jquery';
 
-
-
-
-
 export default class BlockSec extends React.Component {
     constructor() {
         super();
