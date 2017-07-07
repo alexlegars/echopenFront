@@ -1,14 +1,9 @@
 import React from 'react';
 import '../css/block2.css'
-import SineWaves from 'swiper/dist/js/swiper.min';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Slick from 'slick-carousel/slick/slick.min';
+import { slick } from 'slick-carousel/slick/slick.min';
 import $ from 'jquery';
-
-
-
-
 
 export default class BlockSec extends React.Component {
     constructor() {
