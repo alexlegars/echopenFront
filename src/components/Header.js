@@ -112,18 +112,32 @@ export default class Temoignage extends React.Component {
                 <img src="assets/img/logoBlanc.png" alt="" className="mini-logo"/>
                 <div className="socials">
                     <div className="social-single">
-                        <img src="assets/img/fb.png" alt=""/>
+                        <a href="https://www.facebook.com/groups/echopen/">
+                            <img src="assets/img/fb.png" alt=""/>
+                        </a>
                     </div>
                     <div className="social-single">
-                        <img src="assets/img/teter.png" alt=""/>
+                        <a href="https://twitter.com/echopenorg">
+                            <img src="assets/img/teter.png" alt=""/>
+                        </a>
                     </div>
                     <div className="social-single">
-                        <img src="assets/img/github.png" alt=""/>
+                        <a href="https://github.com/echopen">
+                            <img src="assets/img/github.png" alt=""/>
+                        </a>
                     </div>
                 </div>
                 <div className="langs">
-                        <p className="active langs__">Fr</p>
-                        <p className="langs__">En</p>
+                        <p className="active langs__">
+                            <a href="#">
+                                Fr
+                            </a>
+                        </p>
+                        <p className="langs__">
+                            <a href="#">
+                                En
+                            </a>
+                        </p>
                 </div>
                 <div className="header-content">
                     <img src="assets/img/logoBlanc.png" alt="" className="logo will-animate"/>
