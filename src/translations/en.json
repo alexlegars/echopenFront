@@ -1,5 +1,9 @@
 {
   "resources": {
+    "menu" : {
+      "un" : "Home"
+
+    },
     "landing": {
       "title": "Designing an open source and low-cost echo-stethoscope",
       "content": "echOpen is an open and collaborative project and community, led by a multidisciplinary core of experts and senior professionals with the aim of designing a functional low-cost (affordable) and open source echo-stethoscope (ultrasound probe) connected to a smartphone, allowing the radical transformation of diagnostic orientation in hospitals, general medicine and medically underserved areas. This initiate is aimed for health professionals from southern and northern countries."
@@ -34,6 +38,7 @@
       "community": "Our Community"
     },
     "testimony": {
+      "title": "Testimony",
       "1": {
         "name": "Rodrick J.",
         "content": "Echopen impressed me on multiple levels. I just can't get enough of Echopen. I want to get a T-Shirt with Echopen on it so I can show it off to everyone. I can't say enough about Echopen. Echopen should be nominated for service of the year."

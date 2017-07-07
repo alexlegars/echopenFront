@@ -5,11 +5,7 @@ export default class CommentForm extends React.Component {
     constructor() {
         super();
 
-        this.state = {
-            characters: 0
-        };
 
-        this._getCharacterCount = this._getCharacterCount.bind(this);
         this._handleSubmit = this._handleSubmit.bind(this);
     }
 
@@ -28,7 +24,6 @@ export default class CommentForm extends React.Component {
                         <textarea className="form-input" ref={c => this._body = c} onChange={this._getCharacterCount}
                                   placeholder="Message" rows="3"/>
                             </div>
-                            <p>{this.state.characters} caractères.</p>
                             <div className="form-group">
                                 <button type="submit" className="btn btn-primary">Envoyer</button>
                             </div>
@@ -71,11 +66,6 @@ export default class CommentForm extends React.Component {
         )
     }
 
-    _getCharacterCount() {
-        this.setState({
-            characters: this._body.value.length
-        })
-    }
 
     _handleSubmit(event) {
         event.preventDefault();

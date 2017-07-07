@@ -1,6 +1,6 @@
 import React from 'react';
 import {TweenMax} from 'gsap';
-import Is from '../bundles/is'
+import Is from '../bundles/is';
 
 
 export default class Menu extends React.Component {

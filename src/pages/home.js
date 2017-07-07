@@ -11,6 +11,7 @@ import { I18n } from 'react-i18nify'
 import Newsletter from "../components/Newsletter";
 import translationsEn from '../translations/fr.json'
 import translationsFr from '../translations/en.json'
+import { Translate }  from 'react-i18nify';
 
 export default class HomePage extends React.Component {
     constructor(props) {
@@ -66,7 +67,7 @@ export default class HomePage extends React.Component {
         return (
             <div>
                 <Menu ref="menu">
-                    <li id="accueil" className="menu-item"  onClick={this.onClick.bind(this, this.refs.header)}>Accueil</li>
+                    <li id="accueil" className="menu-item"  onClick={this.onClick.bind(this, this.refs.header)}><Translate value="resources.menu.un"/></li>
                     <li id="concept" className="menu-item" onClick={this.onClick.bind(this, this.refs.first)}>Concept</li>
                     <li id="contact" className="menu-item" onClick={this.onClick.bind(this, this.refs.contact)}>Contact</li>
 
