@@ -1,11 +1,56 @@
 {
   "resources": {
-    "people" : {
-      "medical": "Nous piratons la technologie des ultrasons pour créer un écho-stéthoscope open-source et abordable pour tous! Nous espérons que cet outil sera dans toutes les poches des médecins afin d’améliorer le diagnostic.",
-      "firefighter": "Roger est pompier et souhaite améliorer le diagnostic de son patient pendant le voyage entre un accident et l’hôpital. Maintenant, il participe à notre projet en utilisant un écho-stéthoscope et parle dans son travail et avec ses ami!",
-      "common": "Participer à notre projet ne consiste pas juste à utiliser notre produit, vous pouvez collaborer avec nous sur notre projet, peut importe comment ! Votre contribution, même la plus petite, est importante.",
-      "pregnant": "Une grossesse est l’un des moments les plus importants pour une femme. Nous sommes très concernés par la santé de l’enfant à venir et c’est pourquoi notre produit apportera la serrenité à toute la famille"
+    "landing": {
+      "title": "Designing an open source and low-cost echo-stethoscope",
+      "content": "echOpen est un projet et une communauté ouverte et collaborative, menés par un noyau multidisciplinaire d’experts et de professionnels supérieurs dans le but de concevoir un écho-stéthoscope fonctionnel à faible coût (abordable) et open source (sonde à ultrasons) connecté à un smartphone permettant une transformation radicale de l’orientation des diagnostiques dans les hôpitaux, la médecine générale et les zones médicalement mal desservies. Ce lancement s’adresse aux professionnels de la santé du sud et du nord."
     },
-    "app": "Notre application est pour tout le monde, cela peut être un docteur, une infirmière, vous, mois, surtout vous. La simplicité d’utilisation et le coût permettront de confier cette technologie à toute les personnes dans le monde."
+    "history": {
+      "title": "Histoire",
+      "content": "Après avoir réuni une équipe de base de 5 personnes ayant une expertise essentielle pour le projet, nous avons testé la faisabilité (technologie de pointe, applications, etc.). Nous avons ensuite mobilisé d'autres profils et partenaires pour créer une communauté opérationnelle basée sur 9 défis spécifiques que nous avons identifiés et qui couvrent l'ensemble du projet.Comme chaque participant a divers intérêts et capacités d'engagement et d'expertise, nous avons co-créé un calendrier de projet en fonction de ces différents éléments. Utilisation d'un wiki, qui rassemble toutes les informations (techniques, processus, supports, etc.) et des outils de collaboration en ligne. Certains partenaires clés ont apporté des ressources telles que des finances, du matériel, des espaces de travail, etc. pour soutenir l'effort et atteindre les objectifs du projet."
+    },
+    "people" : {
+      "medical": {
+        "content": "Nous piratons la technologie des ultrasons pour créer un écho-stéthoscope open-source et abordable pour tous! Nous espérons que cet outil sera dans toutes les poches des médecins afin d’améliorer le diagnostic.",
+        "title": "Personnel médical"
+      },
+      "firefighter": {
+        "content": "Roger est pompier et souhaite améliorer le diagnostic de son patient pendant le voyage entre un accident et l’hôpital.Maintenant, il participe à notre projet en utilisant un écho-stéthoscope et parle dans son travail et avec ses ami!",
+        "title": "Pompier, secouriste"
+      },
+      "common": {
+        "content": "Participer à notre projet ne consiste pas juste à utiliser notre produit, vous pouvez collaborer avec nous sur notre projet, peut importe comment ! Votre contribution, même la plus petite, est importante.",
+        "title": "Personne lambda"
+      }
+    },
+    "app": {
+      "title": "Application",
+      "content": "Notre application est pour tout le monde, cela peut être un docteur, une infirmière, vous, mois, surtout vous. La simplicité d’utilisation et le coût permettront de confier cette technologie à toute les personnes dans le monde."
+    },
+    "stats": {
+      "prototype": "Prototype",
+      "members": "Membres de la communauté",
+      "events": "Participation a des événements",
+      "hours": "Heures consacrées au projet",
+      "community": "Notre communauté"
+    },
+
+    "testimony": {
+      "1": {
+        "name": "Rodrick J.",
+        "content": "Echopen m'a impressionner a plusieurs niveaux, le concept est tout simplement révolutionnaire !"
+      },
+      "2" : {
+        "content": "Cette application est géniale! C'est du très bon travail. L'investissement en vaut pas la peine.",
+        "name": "Brittan G."
+      },
+      "3" : {
+        "name": "Cecilla H.",
+        "content": "Echopen est le meilleure investissement que j'ai fait ! Je n'ai rien d'autre a dire."
+      },
+      "4": {
+        "name": "Nova G.",
+        "content": "C'est parfait, participez-y."
+      }
+    }
   }
 }

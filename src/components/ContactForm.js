@@ -35,7 +35,11 @@ export default class CommentForm extends React.Component {
                         </form>
                         <div className="info--container">
                             <div className="info--container__content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, velit, voluptatum? Consectetur cum, debitis ea eum fugit ipsum nesciunt rerum sequi, sint sit totam unde, vel vitae? Error, nulla, perferendis.
+                                More Hotel Dieu building A1 - 6th floor
+                                <br/>
+                                1 Parvis Notre-Dame - Pl. Jean-Paul II
+                                <br/>
+                                75004 Paris, France
                             </div>
                             <div className="info--container__icons">
                                 <ul>
@@ -47,20 +51,18 @@ export default class CommentForm extends React.Component {
                         </div>
                     </div>
                     <div className="footer--sub">
-                        <h2>Logotype</h2>
+                        <h2 ><img src="assets/img/logoBlanc.png" alt=""/></h2>
                         <ul className="links">
-                            <li>Item1</li>
-                            <li>Item2</li>
-                            <li>Item3</li>
+                            <li>Wiki</li>
+                            <li>Documentation</li>
+                            <li>Concept</li>
+                            <li>Histoire</li>
+                            <li>Communauté</li>
                         </ul>
                         <div className="copyrights">
                             Copyright &copy; 2017, All rights reserved
                         </div>
-                        <ul className="icons">
-                            <li>Item1</li>
-                            <li>Item2</li>
-                            <li>Item3</li>
-                        </ul>
+
                     </div>
                 </div>
 

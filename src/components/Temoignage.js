@@ -2,8 +2,6 @@ import React from 'react';
 import '../css/temoignage.css'
 import SimpleSlider from '../components/SimpleSlider';
 
-
-
 export default class Temoignage extends React.Component {
     constructor() {
         super();

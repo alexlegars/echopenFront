@@ -1,11 +1,55 @@
 {
   "resources": {
-    "people" : {
-      "medical": "We are hacking ultrasound technology to create an open-science and affordable Echo-stethoscope for all ! We hope that this tool will be in all the pockets of doctors to improve the diagnosis.",
-      "firefighter": "Roger is fireman and want to improve the diagnostic of his patient during the travel between an accident and the hospital. Now, he participate to our project using an echo-stethoscope and talking around in his work and with his friends !",
-      "common": "Participate to our project is not just using the produce, you can collaborate with us on this project, no matter how ! Your contribution, even the smallest, is important.",
-      "pregnant": "A pregnancy is one of the most important moments for a woman. We are very concerned with the health of the child to come and that is why our product will bring serenity to the whole family.",
+    "landing": {
+      "title": "Designing an open source and low-cost echo-stethoscope",
+      "content": "echOpen is an open and collaborative project and community, led by a multidisciplinary core of experts and senior professionals with the aim of designing a functional low-cost (affordable) and open source echo-stethoscope (ultrasound probe) connected to a smartphone, allowing the radical transformation of diagnostic orientation in hospitals, general medicine and medically underserved areas. This initiate is aimed for health professionals from southern and northern countries."
     },
-    "app": "Our application can be for everyone, that can be a doctor, a nurse, you, me, especially you. Simplicity of use and cost will enable to endow this technology every person in the world."
+    "history": {
+      "title": "History",
+      "content": "After bringing together a core team of 5 people with essential expertise for the project, we tested the feasibility (state of the art, applications etc.). We then mobilized other profiles and partners to create an operational community based on 9 specific challenges we identified that cover the entire project. As each participant has various interests and capacities of engagement and expertise, we co-created a project schedule in accordance with these different elements. Using a wiki, which assembles all information (technical, processes, supports, etc.), and online collaboration tools. Some key partners brought resources such as finance, equipment, working spaces, etc. to support the effort and to reach project goals."
+    },
+    "people" : {
+      "medical": {
+        "content": "We are hacking ultrasound technology to create an open-science and affordable Echo-stethoscope for all ! We hope that this tool will be in all the pockets of doctors to improve the diagnosis.",
+        "title": "Medical staff"
+      },
+      "firefighter": {
+        "content": "Roger is fireman and want to improve the diagnostic of his patient during the travel between an accident and the hospital. Now, he participate to our project using an echo-stethoscope and talking around in his work and with his friends !",
+        "title": "Fireman"
+      },
+      "common": {
+        "content": "Participate to our project is not just using the produce, you can collaborate with us on this project, no matter how ! Your contribution, even the smallest, is important.",
+        "title": "Common people"
+      }
+    },
+    "app": {
+      "title": "App",
+      "content": "Our application can be for everyone, that can be a doctor, a nurse, you, me, especially you. Simplicity of use and cost will enable to endow this technology every person in the world."
+    },
+    "stats": {
+      "prototype": "Prototype",
+      "members": "Community's members",
+      "events": "Events ",
+      "hours": "Hours skill given",
+      "community": "Our Community"
+    },
+    "testimony": {
+      "1": {
+        "name": "Rodrick J.",
+        "content": "Echopen impressed me on multiple levels. I just can't get enough of Echopen. I want to get a T-Shirt with Echopen on it so I can show it off to everyone. I can't say enough about Echopen. Echopen should be nominated for service of the year."
+      },
+      "2" : {
+        "content": "Dude, your stuff is the bomb! Nice work on your Echopen. Definitely worth the investment.",
+        "name": "Brittan G."
+      },
+      "3" : {
+        "name": "Cecilla H.",
+        "content": "Echopen is worth much more than I paid. Echopen was the best investment I ever made. I don't know what else to say."
+      },
+      "4": {
+        "name": "Nova G.",
+        "content": "It's all good. Buy this now. "
+      }
+    }
   }
 }

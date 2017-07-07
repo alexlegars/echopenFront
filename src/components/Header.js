@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/header.css';
 import $ from 'jquery';
-import SineWaves from 'sine-waves/sine-waves.min';
 import AnimationCanvas from "./AnimationCanvas";
+import { Translate }  from 'react-i18nify';
 
 export default class Temoignage extends React.Component {
     constructor() {
@@ -92,7 +92,7 @@ export default class Temoignage extends React.Component {
                     </div>
                 </div>
                 <div className="langs">
-                        <p className="active langs__">
+                        <p className="langs__">
                             <a href="/fr">
                                 Fr
                             </a>
@@ -105,8 +105,8 @@ export default class Temoignage extends React.Component {
                 </div>
                 <div className="header-content">
                     <img src="assets/img/logoBlanc.png" alt="" className="logo will-animate"/>
-                    <h2 className="will-animate">Designing an open source and low-cost echo-stethoscope</h2>
-                    <p className=" will-animate">echOpen is an open and collaborative project and community, led by a multidisciplinary core of experts and senior professionals with the aim of designing a functional low-cost (affordable) and open source echo-stethoscope (ultrasound probe) connected to a smartphone, allowing the radical transformation of diagnostic orientation in hospitals, general medicine and medically underserved areas. This initiate is aimed for health professionals from southern and northern countries.</p>
+                    <h2 className="will-animate"><Translate value="resources.landing.title"/></h2>
+                    <p className=" will-animate"><Translate value="resources.landing.content"/></p>
                 </div>
             </div>
         )

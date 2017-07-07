@@ -2,8 +2,7 @@ import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import $ from 'jquery'
-
+import { Translate }  from 'react-i18nify';
 
 export default class SimpleSlider extends React.Component {
     render() {
@@ -45,57 +44,43 @@ export default class SimpleSlider extends React.Component {
                         <div className="single__header">
                             <img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" alt=""/>
                             <div className="single__infos">
-                                <h3>Dr Calvin Johnson</h3>
-                                <p>Médecin généraliste</p>
+                                <h3><Translate value="resources.testimony.1.name"/></h3>
                             </div>
                             <div className="clear"></div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><Translate value="resources.testimony.1.content"/></p>
                     </div>
                     <div className="single__temoignage">
                         <div className="single__header">
                             <img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" alt=""/>
                             <div className="single__infos">
-                                <h3>Dr Calvin Johnson</h3>
-                                <p>Médecin généraliste</p>
+                                <h3><Translate value="resources.testimony.2.name"/></h3>
                             </div>
                             <div className="clear"></div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><Translate value="resources.testimony.2.content"/></p>
                     </div>
                     <div className="single__temoignage">
                         <div className="single__header">
                             <img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" alt=""/>
                             <div className="single__infos">
-                                <h3>Dr Calvin Johnson</h3>
-                                <p>Médecin généraliste</p>
+                                <h3><Translate value="resources.testimony.3.name"/></h3>
                             </div>
                             <div className="clear"></div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><Translate value="resources.testimony.3.content"/></p>
                     </div>
                     <div className="single__temoignage">
                         <div className="single__header">
                             <img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" alt=""/>
                             <div className="single__infos">
-                                <h3>Dr Calvin Johnson</h3>
-                                <p>Médecin généraliste</p>
+                                <h3><Translate value="resources.testimony.4.name"/></h3>
                             </div>
                             <div className="clear"></div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><Translate value="resources.testimony.4.content"/></p>
                     </div>
-                    <div className="single__temoignage">
-                        <div className="single__header">
-                            <img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" alt=""/>
-                            <div className="single__infos">
-                                <h3>Dr Calvin Johnson</h3>
-                                <p>Médecin généraliste</p>
-                            </div>
-                            <div className="clear"></div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
+
             </Slider>
         );
     }

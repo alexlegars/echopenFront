@@ -9,6 +9,8 @@ import scrollToComponent from 'react-scroll-to-component';
 import Menu from "../components/Menu";
 import { I18n } from 'react-i18nify'
 import Newsletter from "../components/Newsletter";
+import translationsEn from '../translations/fr.json'
+import translationsFr from '../translations/en.json'
 
 export default class HomePage extends React.Component {
     constructor(props) {
@@ -16,17 +18,22 @@ export default class HomePage extends React.Component {
 
         this.state = {
             locale: 'fr'
-        }
+        };
+
+        I18n.setTranslations({
+            en: translationsEn,
+            fr: translationsFr
+        });
     }
 
     componentDidMount() {
-        scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500})
+        scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500});
         if (this.props.match.params.locale && this.state.locale !== this.props.match.params.locale) {
-        this.setState({
-        locale: this.props.match.params.locale,
-    });
-        I18n.setLocale(this.state.locale)
-    }
+            this.setState({
+                locale: this.props.match.params.locale,
+            });
+            I18n.setLocale(this.state.locale)
+        }
     }
     onClick(link) {
         scrollToComponent(link , { offset: 0, align: 'top', duration: 1500})
