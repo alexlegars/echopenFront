@@ -2,7 +2,7 @@
   "resources": {
     "landing": {
       "title": "Designing an open source and low-cost echo-stethoscope",
-      "content": "echOpen est un projet et une communauté ouverte et collaborative, menés par un noyau multidisciplinaire d’experts et de professionnels supérieurs dans le but de concevoir un écho-stéthoscope fonctionnel à faible coût (abordable) et open source (sonde à ultrasons) connecté à un smartphone permettant une transformation radicale de l’orientation des diagnostiques dans les hôpitaux, la médecine générale et les zones médicalement mal desservies. Ce lancement s’adresse aux professionnels de la santé du sud et du nord."
+      "content": "echOpen est un projet et une communauté ouverte et collaborative, menés par un noyau multidisciplinaire d’experts et de professionnels supérieurs dans le but de concevoir un écho-stéthoscope fonctionnel à faible coût (abordable) et open source (sonde à ultrasons) connecté à un smartphone permettant une transformation radicale de l’orientation des diagnostiques dans les hôpitaux, la médecine générale et les zones médicalement mal desservies."
     },
     "history": {
       "title": "Histoire",
@@ -51,6 +51,7 @@
         "name": "Nova G.",
         "content": "C'est parfait, participez-y."
       }
-    }
+    },
+    "newsletter": "Restez à jour !"
   }
 }

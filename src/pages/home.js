@@ -24,10 +24,12 @@ export default class HomePage extends React.Component {
             en: translationsEn,
             fr: translationsFr
         });
+        this.parallaxElements = this.parallaxElements.bind(this);
     }
 
     componentDidMount() {
         scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500});
+        requestAnimationFrame(this.parallaxElements);
         if (this.props.match.params.locale && this.state.locale !== this.props.match.params.locale) {
             this.setState({
                 locale: this.props.match.params.locale,
@@ -36,45 +38,44 @@ export default class HomePage extends React.Component {
         }
     }
     onClick(link) {
-        scrollToComponent(link , { offset: 0, align: 'top', duration: 1500})
+        scrollToComponent(link , { offset: 0, align: 'top', duration: 1500});
         this.refs.menu.toogleOpen();
     }
+    parallaxElements() {
+        $(".will-animate, .wa, .case-item").each(function (i, v) {
+
+            var scrollTop = $(window).scrollTop(),
+                el = $(this),
+                elHeight = el.height(),
+                winHeight = $(window).height(),
+                offsetTop = el.offset().top + parseInt(el.css("padding-top")),// + winHeight * app.delta
+                bottomScreen = scrollTop + winHeight;
+
+            if (bottomScreen >= offsetTop) {
+                el.addClass("animate");
+            }
+
+        });
+        requestAnimationFrame(this.parallaxElements);
+    }
+
+
 
     render() {
-        $(function () {
-            function parallaxElements() {
 
-                $(".will-animate, .wa, .case-item").each(function (i, v) {
-
-                    var scrollTop = $(window).scrollTop(),
-                        el = $(this),
-                        elHeight = el.height(),
-                        winHeight = $(window).height(),
-                        offsetTop = el.offset().top + parseInt(el.css("padding-top")),// + winHeight * app.delta
-                        bottomScreen = scrollTop + winHeight;
-
-                    if (bottomScreen >= offsetTop) {
-                        el.addClass("animate");
-                    }
-
-                });
-                requestAnimationFrame(parallaxElements);
-            }
-            requestAnimationFrame(parallaxElements);
-        });
         return (
             <div>
                 <Menu ref="menu">
                     <li id="accueil" className="menu-item"  onClick={this.onClick.bind(this, this.refs.header)}>Accueil</li>
-                    <li id="produit" className="menu-item" onClick={this.onClick.bind(this, this.refs.slider)}>Produit</li>
-                    <li id="communaute" className="menu-item" onClick={this.onClick.bind(this, this.refs.temoignage)}>Communauté</li>
+                    <li id="concept" className="menu-item" onClick={this.onClick.bind(this, this.refs.first)}>Concept</li>
+                    <li id="contact" className="menu-item" onClick={this.onClick.bind(this, this.refs.contact)}>Contact</li>
 
                 </Menu>
                 <Header ref="header"/>
                 <BlockSec ref="first"/>
                 <Stats/>
                 <Temoignage ref="temoignage"/>
-                <Newsletter/>
+                <Newsletter ref="contact"/>
                 <ContactForm ref="form"/>
             </div>
         )
