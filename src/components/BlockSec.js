@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/block2.css'
-import SineWaves from 'swiper/dist/js/swiper.min';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slick from 'slick-carousel/slick/slick.min';
