@@ -1,5 +1,5 @@
 import React from 'react';
-import {slide as Menu} from 'react-burger-menu';
+import Stats from "../components/Stats"
 import ContactForm from "../components/ContactForm";
 import BlockSec from "../components/BlockSec";
 import SimpleSlider from '../components/SimpleSlider';
@@ -7,29 +7,22 @@ import Temoignage from '../components/Temoignage';
 import Header from '../components/Header';
 import $ from 'jquery';
 import scrollToComponent from 'react-scroll-to-component';
-import Is from '../bundles/is'
-import {TweenMax} from 'gsap';
-import BurgerButton from "../components/BurgerButton";
+import Menu from "../components/Menu";
+import BlockFirst from "../components/BlockFirst";
 
 export default class HomePage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isOpened: false,
-            statement: null,
-            mobile: null
-        };
-        this.isMenuOpen = this.isMenuOpen.bind(this);
 
     }
 
-
-    isMenuOpen(state) {
-        if (state.isOpened = !state.isOpened) {
-            this.setState({isOpened: state.isOpen});
-        }
+    componentDidMount() {
+        scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500})
     }
-
+    onClick(link) {
+        scrollToComponent(link , { offset: 0, align: 'top', duration: 1500})
+        this.refs.menu.toogleOpen();
+    }
 
     render() {
         $(function () {
@@ -59,30 +52,16 @@ export default class HomePage extends React.Component {
 
         return (
             <div>
-                <Menu right customCrossIcon={false} burgerBarClassName={ "burger-icon" } burgerButtonClassName={ "burger" } customBurgerIcon={<BurgerButton data={this.state.isOpened}/> } onStateChange={ this.isMenuOpen } width={Is.mobile ? '100%' : '50%' }>
-                    <div id="home" className="menu-item" onClick={() => scrollToComponent(this.refs.slider, {
-                        offset: 0,
-                        align: 'top',
-                        duration: 1500
-                    })}>Home
-                    </div>
-                    <div id="about" className="menu-item" onClick={() => scrollToComponent(this.refs.form, {
-                        offset: 0,
-                        align: 'top',
-                        duration: 1500
-                    })}>About
-                    </div>
-                    <div id="contact" className="menu-item" onClick={() => scrollToComponent(this.refs.slider, {
-                        offset: 0,
-                        align: 'top',
-                        duration: 1500
-                    })}>Contact
-                    </div>
+                <Menu ref="menu">
+                    <li id="accueil" className="menu-item"  onClick={this.onClick.bind(this, this.refs.header)}>Accueil</li>
+                    <li id="produit" className="menu-item" onClick={this.onClick.bind(this, this.refs.slider)}>Produit</li>
+                    <li id="communaute" className="menu-item" onClick={this.onClick.bind(this, this.refs.temoignage)}>Communauté</li>
+
                 </Menu>
-                <Header/>
-                {/*<SimpleSlider ref="slider"/>*/}
+                <Header ref="header"/>
                 <BlockSec ref="first"/>
-                <Temoignage/>
+                <Stats/>
+                <Temoignage ref="temoignage"/>
                 <ContactForm ref="form"/>
             </div>
         )
