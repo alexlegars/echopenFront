@@ -60,11 +60,9 @@ export default class HomePage extends React.Component {
 
                 <Header ref="header"/>
                 {/*<SimpleSlider ref="slider"/>*/}
-                <BlockFirst ref="slider"/>
+
                 <BlockSec ref="first"/>
                 <Temoignage ref="temoignage"/>
-
-
                 <ContactForm ref="form"/>
             </div>
         )

@@ -4,7 +4,6 @@ import $ from 'jquery';
 import SineWaves from 'sine-waves/sine-waves.min';
 import AnimationCanvas from "./AnimationCanvas";
 
-
 export default class Temoignage extends React.Component {
     constructor() {
         super();
@@ -47,7 +46,6 @@ export default class Temoignage extends React.Component {
 
 
     parallaxElements() {
-
         $(".will-animate, .wa, .case-item").each(function (i, v) {
 
             var scrollTop = $(window).scrollTop(),
@@ -62,14 +60,12 @@ export default class Temoignage extends React.Component {
             }
 
         });
-
-
         requestAnimationFrame(this.parallaxElements);
     }
 
+
     componentDidMount() {
         requestAnimationFrame(this.parallaxElements);
-
     }
     render() {
 
@@ -80,25 +76,38 @@ export default class Temoignage extends React.Component {
                 <img src="assets/img/logoBlanc.png" alt="" className="mini-logo"/>
                 <div className="socials">
                     <div className="social-single">
-                        <img src="assets/img/fb.png" alt=""/>
+                        <a href="https://www.facebook.com/groups/echopen/">
+                            <img src="assets/img/fb.png" alt=""/>
+                        </a>
                     </div>
                     <div className="social-single">
-                        <img src="assets/img/teter.png" alt=""/>
+                        <a href="https://twitter.com/echopenorg">
+                            <img src="assets/img/teter.png" alt=""/>
+                        </a>
                     </div>
                     <div className="social-single">
-                        <img src="assets/img/github.png" alt=""/>
+                        <a href="https://github.com/echopen">
+                            <img src="assets/img/github.png" alt=""/>
+                        </a>
                     </div>
                 </div>
                 <div className="langs">
-                        <p className="active langs__">Fr</p>
-                        <p className="langs__">En</p>
+                        <p className="active langs__">
+                            <a href="#">
+                                Fr
+                            </a>
+                        </p>
+                        <p className="langs__">
+                            <a href="#">
+                                En
+                            </a>
+                        </p>
                 </div>
                 <div className="header-content">
-                    <img src="assets/img/logoBlanc.png" alt="" className="logo"/>
+                    <img src="assets/img/logoBlanc.png" alt="" className="logo will-animate"/>
                     <h2 className="will-animate">Designing an open source and low-cost echo-stethoscope</h2>
-                    <p>echOpen is an open and collaborative project and community, led by a multidisciplinary core of experts and senior professionals with the aim of designing a functional low-cost (affordable) and open source echo-stethoscope (ultrasound probe) connected to a smartphone, allowing the radical transformation of diagnostic orientation in hospitals, general medicine and medically underserved areas. This initiate is aimed for health professionals from southern and northern countries.</p>
+                    <p className=" will-animate">echOpen is an open and collaborative project and community, led by a multidisciplinary core of experts and senior professionals with the aim of designing a functional low-cost (affordable) and open source echo-stethoscope (ultrasound probe) connected to a smartphone, allowing the radical transformation of diagnostic orientation in hospitals, general medicine and medically underserved areas. This initiate is aimed for health professionals from southern and northern countries.</p>
                 </div>
-                <img src="assets/img/scroll.png" alt="" className="scroll"/>
             </div>
         )
     }
