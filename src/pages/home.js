@@ -8,6 +8,7 @@ import $ from 'jquery';
 import scrollToComponent from 'react-scroll-to-component';
 import Menu from "../components/Menu";
 import { I18n } from 'react-i18nify'
+import Newsletter from "../components/Newsletter";
 
 export default class HomePage extends React.Component {
     constructor(props) {
@@ -66,6 +67,7 @@ export default class HomePage extends React.Component {
                 <BlockSec ref="first"/>
                 <Stats/>
                 <Temoignage ref="temoignage"/>
+                <Newsletter/>
                 <ContactForm ref="form"/>
             </div>
         )
