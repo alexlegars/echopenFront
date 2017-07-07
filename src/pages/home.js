@@ -2,22 +2,30 @@ import React from 'react';
 import Stats from "../components/Stats"
 import ContactForm from "../components/ContactForm";
 import BlockSec from "../components/BlockSec";
-import SimpleSlider from '../components/SimpleSlider';
 import Temoignage from '../components/Temoignage';
 import Header from '../components/Header';
 import $ from 'jquery';
 import scrollToComponent from 'react-scroll-to-component';
 import Menu from "../components/Menu";
-import BlockFirst from "../components/BlockFirst";
+import { I18n } from 'react-i18nify'
 
 export default class HomePage extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            locale: 'fr'
+        }
     }
 
     componentDidMount() {
         scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500})
+        if (this.props.match.params.locale && this.state.locale !== this.props.match.params.locale) {
+        this.setState({
+        locale: this.props.match.params.locale,
+    });
+        I18n.setLocale(this.state.locale)
+    }
     }
     onClick(link) {
         scrollToComponent(link , { offset: 0, align: 'top', duration: 1500})
@@ -42,14 +50,10 @@ export default class HomePage extends React.Component {
                     }
 
                 });
-
-
                 requestAnimationFrame(parallaxElements);
             }
-
             requestAnimationFrame(parallaxElements);
         });
-
         return (
             <div>
                 <Menu ref="menu">

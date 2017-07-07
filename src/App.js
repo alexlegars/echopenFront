@@ -1,9 +1,9 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import HomePage from './pages/home';
-import Layout from './layout/layout';
 import './App.css';
-import './css/app.css'
+import './css/app.css';
+import Layout from './layout/layout'
 
 export default class App extends React.Component {
 
@@ -11,9 +11,7 @@ export default class App extends React.Component {
   render() {
     return (
         <div>
-            <Redirect from="/" to="/home"/>
-            <Route path="/" component={Layout}/>
-            <Route path="/home" exact component={HomePage}/>
+            <Route path="/:locale?" component={HomePage}/>
         </div>
     );
   }

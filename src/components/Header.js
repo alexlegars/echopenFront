@@ -93,12 +93,12 @@ export default class Temoignage extends React.Component {
                 </div>
                 <div className="langs">
                         <p className="active langs__">
-                            <a href="#">
+                            <a href="/fr">
                                 Fr
                             </a>
                         </p>
                         <p className="langs__">
-                            <a href="#">
+                            <a href="/en">
                                 En
                             </a>
                         </p>
