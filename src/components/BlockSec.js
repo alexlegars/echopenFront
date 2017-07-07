@@ -26,7 +26,7 @@ export default class BlockSec extends React.Component {
                 </div>
 
                 <div className="block__2-first history will-animate">
-                    <h4 className=" will-animate">Histoire</h4>
+                    <h4 className=" will-animate">History</h4>
                     <h5>Histoire</h5>
                     <div className="block__2-container">
                         <div className="block__2-wrapper-r">

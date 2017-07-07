@@ -17,13 +17,14 @@ export default class SliderConcept extends React.Component {
             <Slider className="block__2-container concept-slick will-animate" {...settings}>
                     <div className="block__2-wrapper-r">
                         <div className="left">
-                            <h2 className=" will-animate">Personnel médical</h2>
+                            <h2 className=" will-animate">Medical Staff
+                            </h2>
                             <div className="left-container  will-animate">
                                 <h3>We are hacking ultrasound technology to create an open-science and affordable Echo-stethoscope for all!
                                     <br/> We hope that this tool will be in all the pockets of doctors to improve the diagnosis.
                                 </h3>
                                 <div className="bottom-part will-animate">
-                                    <p className="bottom-title">Personnel médical</p>
+                                    <p className="bottom-title">Medical Staff</p>
                                     <hr className="hr-1"/>
                                     <p className="bottom-number">01</p>
                                     <div className="clear"></div>
