@@ -16,8 +16,8 @@ export default class Menu extends React.Component {
     componentWillUnmount() {
     }
 
-    toogleOpen(e) {
-        e.preventDefault();
+    toogleOpen() {
+
         let open = !this.state.open;
         if (Is.mobile) {
             this.refs.links.classList.remove('transparent');
@@ -54,8 +54,8 @@ export default class Menu extends React.Component {
 
         return (
             <div className={"component menu "+(this.state.open?"open ":"")+(Is.mobile?"mobile ":"")}>
-                <div className="containerMenu" onMouseEnter={!Is.mobile?this.open.bind(this):null} onClick={this.toogleOpen.bind(this)} onMouseLeave={!Is.mobile?this.close.bind(this):null}>
-                    <div className="burger">
+                <div className="containerMenu" onMouseEnter={!Is.mobile?this.open.bind(this):null} onMouseLeave={!Is.mobile?this.close.bind(this):null}>
+                    <div className="burger" onClick={this.toogleOpen.bind(this)} >
                         <div className="content">
                             <div className="line"/>
                             <div className="line"/>
@@ -64,6 +64,8 @@ export default class Menu extends React.Component {
                     </div>
                     <ul className="links" ref="links">
                         {this.props.children}
+                        <li><a  target="_blank" href="http://documentation.echopen.org/">Documentation</a></li>
+                        <li><a target="_blank" href="http://wiki.echopen.org/index.php/Main_Page">Wiki</a></li>
                       <div className="clr"/>
                     </ul>
                 </div>

@@ -18,7 +18,10 @@ export default class HomePage extends React.Component {
     componentDidMount() {
         scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500})
     }
-
+    onClick(link) {
+        scrollToComponent(link , { offset: 0, align: 'top', duration: 1500})
+        this.refs.menu.toogleOpen();
+    }
 
     render() {
         $(function () {
@@ -49,11 +52,10 @@ export default class HomePage extends React.Component {
         return (
             <div>
                 <Menu ref="menu">
-                    <li id="accueil" className="menu-item"  onClick={() => scrollToComponent(this.refs.header, { offset: 0, align: 'top', duration: 1500})}>Accueil</li>
-                    <li id="produit" className="menu-item" onClick={() => scrollToComponent(this.refs.slider, { offset: 0, align: 'top', duration: 1500})}>Produit</li>
-                    <li id="communaute" className="menu-item" onClick={() => scrollToComponent(this.refs.form, { offset: 0, align: 'top', duration: 1500})}>Communauté</li>
-                    <li><a target="_blank" href="http://documentation.echopen.org/">Documentation</a></li>
-                    <li><a target="_blank" href="http://wiki.echopen.org/index.php/Main_Page">Wiki</a></li>
+                    <li id="accueil" className="menu-item"  onClick={this.onClick.bind(this, this.refs.header)}>Accueil</li>
+                    <li id="produit" className="menu-item" onClick={this.onClick.bind(this, this.refs.slider)}>Produit</li>
+                    <li id="communaute" className="menu-item" onClick={this.onClick.bind(this, this.refs.temoignage)}>Communauté</li>
+
                 </Menu>
 
                 <Header ref="header"/>
