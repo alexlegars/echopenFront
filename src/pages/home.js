@@ -1,4 +1,5 @@
 import React from 'react';
+import Stats from "../components/Stats"
 import ContactForm from "../components/ContactForm";
 import BlockSec from "../components/BlockSec";
 import SimpleSlider from '../components/SimpleSlider';
@@ -57,11 +58,9 @@ export default class HomePage extends React.Component {
                     <li id="communaute" className="menu-item" onClick={this.onClick.bind(this, this.refs.temoignage)}>Communauté</li>
 
                 </Menu>
-
                 <Header ref="header"/>
-                {/*<SimpleSlider ref="slider"/>*/}
-
                 <BlockSec ref="first"/>
+                <Stats/>
                 <Temoignage ref="temoignage"/>
                 <ContactForm ref="form"/>
             </div>
