@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/block2.css'
+import '../css/block2.css';
 import SliderConcept from '../components/SliderConcept';
 /*import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
